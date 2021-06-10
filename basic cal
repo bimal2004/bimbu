@@ -1,0 +1,44 @@
+from functools import reduce
+
+def add(x,y):
+      return x+y
+def sub(x,y):
+      return x-y
+def mult(x,y):
+      return x*y
+def divide(x,y):
+      return x/y
+while True:
+      print("WELCOME TO BIMAL'S CALCULATOR :) ENJOY")
+      print("select opertion")
+      print("1.Add")
+      print("2.subtract")
+      print('3.multiply')
+      print("4.divide")
+      print("5.Quit")
+      choice= input("enter the choice 1,2,3,4,5:")
+      if(choice=='5'):
+            y=input("R u sure u wanna quit(yes,no) coz its bimals cal,u wont get this type of cal in this universe: ")
+            if y=="no":
+                  
+                  continue
+            else:
+                  print("happy birthday...program is over :( go die!!!")
+                  break
+      else:
+            num=input("enter the numbers:").split()
+            num=list(map(float,num))
+            if choice=="3":
+                  MULT=reduce(mult,num)
+                  print(MULT)
+            elif choice=="2":
+                  SUB=reduce(sub,num)
+                  print(SUB)
+            elif choice=="1":
+                  ADD=reduce(add,num)
+                  print(ADD)
+            elif choice=="4":
+                  DIVIDE=reduce(divide,num)
+                  print(DIVIDE)
+            else:
+                  print("wrong value entered.open your eye's and look")
